@@ -1,6 +1,33 @@
 .containerCount {
-  width: 10rem;
+  margin-top: 2rem;
+  width: 20rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.btnOperacion {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 0.05rem solid #543c8b;
+  border-radius: 20%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.containerCount h3 {
+  font-size: 1.5rem;
+}
+
+.containerCount .btnAgregar {
+  padding: 0rem 0.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  background: #543c8b;
+  border-style: none;
+  color: #fff;
+  border-radius: 0.5rem;
 }

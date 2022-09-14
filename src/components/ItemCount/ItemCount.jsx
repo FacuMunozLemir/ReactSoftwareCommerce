@@ -6,6 +6,8 @@ export default function ItemCounter(props) {
   function handleClickSuma() {
     if (count < props.stock) {
       setCount(count + 1);
+    } else {
+      alert("el stock máximo disponible es de " + props.stock + " unidades");
     }
   }
 
@@ -21,10 +23,16 @@ export default function ItemCounter(props) {
 
   return (
     <div className="containerCount">
-      <button onClick={handleClickResta}>-</button>
+      <button className="btnOperacion" onClick={handleClickResta}>
+        -
+      </button>
       <h3>{count}</h3>
-      <button onClick={handleClickSuma}>+</button>
-      <button onClick={onAdd}> Agregar al Carrito</button>
+      <button className="btnOperacion" onClick={handleClickSuma}>
+        +
+      </button>
+      <button className="btnAgregar" onClick={onAdd}>
+        Agregar al Carrito
+      </button>
     </div>
   );
 }

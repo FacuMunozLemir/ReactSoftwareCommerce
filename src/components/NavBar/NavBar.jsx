@@ -19,7 +19,8 @@ function NavBar() {
             <a href="#">Android</a>
           </li>
           <li>
-            <CartWidget></CartWidget>Carrito
+            <CartWidget />
+            <a href="#">Carrito</a>
           </li>
         </ul>
       </div>

@@ -1,4 +1,5 @@
 import "./navbar.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar() {
   return (
@@ -16,6 +17,9 @@ function NavBar() {
           </li>
           <li>
             <a href="#">Android</a>
+          </li>
+          <li>
+            <CartWidget></CartWidget>Carrito
           </li>
         </ul>
       </div>

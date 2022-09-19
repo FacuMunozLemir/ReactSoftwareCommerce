@@ -1,6 +1,6 @@
 import getItems from "../../services/mockAPI";
 import { useEffect, useState } from "react";
-import Card from "../Card/Card";
+import Item from "../Item/Item";
 
 export default function ItemList(props) {
   let [data, setData] = useState([]);
@@ -15,9 +15,11 @@ export default function ItemList(props) {
   return data.map((item) => {
     console.log("item");
     return (
-      <Card
+      <Item
         key={item.id}
-        titulo={item.tituo}
+        nombre={item.nombre}
+        imagen={item.img}
+        descripcion={item.descripcion}
         precio={item.precio}
         stock={item.stock}
       />

@@ -1,0 +1,28 @@
+.card {
+  width: 15rem;
+  height: auto;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 0.05rem solid #543c8b;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem 0rem #000;
+}
+
+.card img {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+.card h4 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card .precio {
+  font-weight: 600;
+}

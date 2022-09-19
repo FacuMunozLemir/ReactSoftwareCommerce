@@ -24,13 +24,16 @@ export default function ItemCount({ stock, initial, onAdd }) {
 
   return (
     <div className="containerCount">
-      <button className="btnOperacion" onClick={handleClickResta}>
-        -
-      </button>
-      <h3>{count}</h3>
-      <button className="btnOperacion" onClick={handleClickSuma}>
-        +
-      </button>
+      <div className="fila">
+        <button className="btnOperacion" onClick={handleClickResta}>
+          -
+        </button>
+        <h3>{count}</h3>
+        <button className="btnOperacion" onClick={handleClickSuma}>
+          +
+        </button>
+      </div>
+
       <button className="btnAgregar" onClick={agregarCarrito}>
         Agregar al Carrito
       </button>

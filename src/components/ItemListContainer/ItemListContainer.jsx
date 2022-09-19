@@ -1,10 +1,20 @@
 import "./itemListContainer.css";
+import ItemList from "../ItemList/ItemList";
 
-function ItemListContainer() {
+//1. Obtener los datos de nuestra mock api
+// estado
+// cliclos de vida
+// props
+// promesas
+// ...map
+
+function ItemListContainer(props) {
   return (
     <div className="container">
-      <h1>Catálogo de Software</h1>
-      <div className="cardsContainer"></div>
+      <h1>{props.greeting}</h1>
+      <div className="itemsContainer">
+        <ItemList />
+      </div>
     </div>
   );
 }

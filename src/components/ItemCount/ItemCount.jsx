@@ -1,24 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./itemcount.css";
 
-export default function ItemCounter(props) {
-  const [count, setCount] = useState(props.initial);
+export default function ItemCount({ stock, initial, onAdd }) {
+  const [count, setCount] = useState(initial);
+
   function handleClickSuma() {
-    if (count < props.stock) {
+    if (count < stock) {
       setCount(count + 1);
     } else {
-      alert("el stock máximo disponible es de " + props.stock + " unidades");
+      alert("el stock máximo disponible es de " + stock + " unidades");
     }
   }
 
   function handleClickResta() {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   }
 
-  function onAdd() {
-    alert("Producto agregado al carrito");
+  function agregarCarrito() {
+    onAdd({ count });
   }
 
   return (
@@ -30,7 +31,7 @@ export default function ItemCounter(props) {
       <button className="btnOperacion" onClick={handleClickSuma}>
         +
       </button>
-      <button className="btnAgregar" onClick={onAdd}>
+      <button className="btnAgregar" onClick={agregarCarrito}>
         Agregar al Carrito
       </button>
     </div>

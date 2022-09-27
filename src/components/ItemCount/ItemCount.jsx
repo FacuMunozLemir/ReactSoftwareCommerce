@@ -13,13 +13,13 @@ export default function ItemCount({ stock, initial, onAdd }) {
   }
 
   function handleClickResta() {
-    if (count > 1) {
+    if (count > initial) {
       setCount(count - 1);
     }
   }
 
   function agregarCarrito() {
-    onAdd({ count });
+    onAdd(count);
   }
 
   return (

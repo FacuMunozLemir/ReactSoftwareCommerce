@@ -2,7 +2,7 @@ import "./item.css";
 import ItemCount from "../ItemCount/ItemCount";
 
 export default function Card(item) {
-  function onAdd({ count }) {
+  function onAdd(count) {
     alert(
       "Se ha agregado " +
         count +

@@ -1,5 +1,4 @@
 import "./item.css";
-import ItemCount from "../ItemCount/ItemCount";
 
 export default function Card(item) {
   function onAdd(count) {
@@ -21,7 +20,9 @@ export default function Card(item) {
       <img src={item.imagen} alt="" />
       <p>{item.descripcion}</p>
       <p className="precio">Valor: ${item.precio}</p>
-      <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />
+      <a href="#" className="btnDescripcion">
+        Descripción
+      </a>
     </div>
   );
 }

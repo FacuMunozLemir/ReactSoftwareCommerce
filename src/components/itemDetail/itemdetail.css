@@ -1,0 +1,32 @@
+.contenedorDescripcionProducto {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.contenedorDescripcionProducto .izquierda {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorDescripcionProducto img {
+  height: 20rem;
+}
+
+.contenedorDescripcionProducto .derecha {
+  width: 50%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contenedorDescripcionProducto .derecha p {
+  font-size: 1.1rem;
+}

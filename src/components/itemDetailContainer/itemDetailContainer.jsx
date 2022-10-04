@@ -1,26 +1,32 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import getItems from "../../services/mockAPI";
+import { getSingleElement } from "../../services/mockAPI";
 import ItemDetail from "../itemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+
+import "./itemdetailcontainer.css";
 
 function ItemDetailContainer() {
+  const id = useParams().id;
+
   let [item, setItem] = useState([]);
   useEffect(() => {
-    getItems().then((respuestaDatos) => {
-      setItem(respuestaDatos[0]);
-      console.log(item);
+    getSingleElement(id).then((respuestaDatos) => {
+      setItem(respuestaDatos);
     });
-  }, [item]);
+  }, [id]);
 
   return (
-    <ItemDetail
-      nombre={item.nombre}
-      stock={item.stock}
-      categoria={item.categoria}
-      descripcion={item.descripcion}
-      img={item.img}
-      precio={item.precio}
-    />
+    <div className="itemDetailContainer">
+      <ItemDetail
+        nombre={item.nombre}
+        stock={item.stock}
+        categoria={item.categoria}
+        descripcion={item.descripcion}
+        img={item.img}
+        precio={item.precio}
+      />
+    </div>
   );
 }
 

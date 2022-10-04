@@ -1,24 +1,28 @@
 .contenedorDescripcionProducto {
   margin-top: 2rem;
   width: 100%;
+  max-width: 80rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .contenedorDescripcionProducto .izquierda {
-  width: 50%;
+  width: 30rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contenedorDescripcionProducto img {
-  height: 20rem;
+  width: 100%;
 }
 
 .contenedorDescripcionProducto .derecha {
-  width: 50%;
+  width: 30rem;
   height: 20rem;
   display: flex;
   flex-direction: column;

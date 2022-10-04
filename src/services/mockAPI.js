@@ -8,7 +8,7 @@ const data = [
     stock: "5",
     categoria: "windows",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus vestibulum posuere. Vivamus lacinia molestie magna a dignissim.",
+      "Programa para computadoras con SO Windows principalmente pensado para llevar el control tus pacientes, con sus fichas medicas, fotos, y mucho más",
     precio: 55000,
     img: "/assets/img/consultorio.jpg", //Siempre con la / primero --> busque en public
   },
@@ -18,7 +18,7 @@ const data = [
     stock: "4",
     categoria: "windows",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus vestibulum posuere. Vivamus lacinia molestie magna a dignissim.",
+      "Programa para computadoras con SO Windows principalmente pensado para llevar el control de la entrada/salida de los vehículos en una 'cochera' o 'parking' ",
     precio: 25000,
     img: "/assets/img/cochera.jpg",
   },
@@ -28,7 +28,7 @@ const data = [
     stock: "3",
     categoria: "windows",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus vestibulum posuere. Vivamus lacinia molestie magna a dignissim.",
+      "Programa para computadoras con SO Windows principalmente pensado para llevar el control de las ventas, mesas y comandas de tu restaurante",
     precio: 40000,
     img: "/assets/img/restaurante.jpg",
   },
@@ -38,7 +38,7 @@ const data = [
     stock: "5",
     categoria: "android",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus vestibulum posuere. Vivamus lacinia molestie magna a dignissim.",
+      "Programa para dispositivos con SO Android principalmente pensado para llevar el control de las ventas, mesas y comandas de tu Bar",
     precio: 22000,
     img: "/assets/img/bar.jpg",
   },
@@ -48,7 +48,7 @@ const data = [
     stock: "5",
     categoria: "android",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus vestibulum posuere. Vivamus lacinia molestie magna a dignissim.",
+      "Programa para dispositivos con SO Android principalmente pensado para llevar el control de las ventas, mesas y comandas de tu restaurante",
     precio: 250000,
     img: "/assets/img/restaurante.jpg",
   },
@@ -58,7 +58,7 @@ const data = [
     stock: "3",
     categoria: "android",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus vestibulum posuere. Vivamus lacinia molestie magna a dignissim.",
+      "Programa para dispositivos con SO Android principalmente pensado para llevar el control de la entrada/salida de los vehículos en una 'cochera' o 'parking' ",
     precio: 15000,
     img: "/assets/img/cochera.jpg",
   },

@@ -1,20 +1,17 @@
 import React from "react";
 import "./itemdetail.css";
 import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
 
 function ItemDetail(props) {
-  function onAdd(count) {
-    alert(
-      "Se ha agregado " +
-        count +
-        " unidades del producto seleccionado al carrito"
-    );
-    console.log(
-      "Se ha agregado " +
-        count +
-        " unidades del producto seleccionado al carrito"
-    );
+  /*Hacemos un estado para guardar el item count*/
+  let estado = false;
+  function handleAddToCart(count) {
+    alert(`Se ha agregado ${count} unidades del producto seleccionado`);
+    estado = count;
+    alert(estado);
   }
+
   return (
     <div className="contenedorDescripcionProducto">
       <div className="izquierda">
@@ -30,7 +27,15 @@ function ItemDetail(props) {
         <div className="precio">
           <p>Valor por unidad: ${props.precio}</p>
         </div>
-        <ItemCount stock={props.stock} initial={1} onAdd={onAdd} />
+        {estado === false ? (
+          <ItemCount
+            stock={props.stock}
+            initial={1}
+            onAddToCart={handleAddToCart}
+          />
+        ) : (
+          <button>Finaizar Compra</button>
+        )}
       </div>
     </div>
   );

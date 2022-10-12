@@ -30,7 +30,11 @@
   font-size: 1.5rem;
 }
 
-.containerCount .btnAgregar {
+.containerCount a {
+  width: 100%;
+}
+
+.containerCount a .btnAgregar {
   margin-top: 0.5rem;
   height: 2.5rem;
   width: 100%;

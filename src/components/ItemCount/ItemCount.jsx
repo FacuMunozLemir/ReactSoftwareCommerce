@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./itemcount.css";
+import { Link } from "react-router-dom";
 
-export default function ItemCount({ stock, initial, onAdd }) {
+export default function ItemCount({ stock, initial, onAddToCart }) {
   const [count, setCount] = useState(initial);
 
   function handleClickSuma() {
@@ -18,10 +19,6 @@ export default function ItemCount({ stock, initial, onAdd }) {
     }
   }
 
-  function agregarCarrito() {
-    onAdd(count);
-  }
-
   return (
     <div className="containerCount">
       <div className="fila">
@@ -33,10 +30,11 @@ export default function ItemCount({ stock, initial, onAdd }) {
           +
         </button>
       </div>
-
-      <button className="btnAgregar" onClick={agregarCarrito}>
-        Agregar al Carrito
-      </button>
+      <Link to="/carrito">
+        <button className="btnAgregar" onClick={() => onAddToCart(count)}>
+          Agregar al Carrito
+        </button>
+      </Link>
     </div>
   );
 }

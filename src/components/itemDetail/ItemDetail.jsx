@@ -5,11 +5,10 @@ import { useState } from "react";
 
 function ItemDetail(props) {
   /*Hacemos un estado para guardar el item count*/
-  let estado = false;
+  const [estado, setEstado] = useState(0);
   function handleAddToCart(count) {
     alert(`Se ha agregado ${count} unidades del producto seleccionado`);
-    estado = count;
-    alert(estado);
+    setEstado(count);
   }
 
   return (
@@ -27,7 +26,7 @@ function ItemDetail(props) {
         <div className="precio">
           <p>Valor por unidad: ${props.precio}</p>
         </div>
-        {estado === false ? (
+        {estado === 0 ? (
           <ItemCount
             stock={props.stock}
             initial={1}

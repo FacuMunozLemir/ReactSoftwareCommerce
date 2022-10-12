@@ -2,7 +2,11 @@ import "./navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
+// import React, { useContext } from "react";
+// import { userContext } from "../context/userContext";
+
 function NavBar() {
+  // const micontext = useContext(userContext);
   return (
     <nav>
       <div className="logo">
@@ -16,7 +20,7 @@ function NavBar() {
             <Link to="/categoria/todos">Todos</Link>
           </li>
           <li>
-            <Link to="/categoria/windows">Windows</Link>
+            <Link to="/categoria/windows">Windows</Link>E
           </li>
           <li>
             <Link to="/categoria/android">Android</Link>

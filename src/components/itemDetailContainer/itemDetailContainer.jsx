@@ -19,6 +19,7 @@ function ItemDetailContainer() {
   return (
     <div className="itemDetailContainer">
       <ItemDetail
+        id = {item.id}
         nombre={item.nombre}
         stock={item.stock}
         categoria={item.categoria}

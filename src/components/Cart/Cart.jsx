@@ -1,13 +1,29 @@
-import React, { PureComponent } from "react";
+import "./cart.css"
+import { cartContext } from "../context/cartContext";
+import React, { useContext } from "react";
 
-export class Cart extends PureComponent {
-  render() {
+function Cart () {
+
+  const { getItem } = useContext(cartContext);
+  const { emptyCart } = useContext(cartContext);
+  
+    
+  function vaciarCarrito(){
+    emptyCart();
+  }
     return (
-      <div>
-        <h1>Cart</h1>
+      <div className="cart">
+        <h3>Carrito de compras</h3>
+        <div className="cartTitulos">
+          <p>Prodcutos</p>
+          <button onClick={vaciarCarrito}>Vaciar Carrito</button>
+        </div>
+        <div className="cartProductsContainer">
+          
+        </div>
       </div>
     );
-  }
+  
 }
 
 export default Cart;

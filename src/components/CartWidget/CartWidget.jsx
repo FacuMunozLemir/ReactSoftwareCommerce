@@ -3,12 +3,13 @@ import React, { useContext } from "react";
 import { cartContext } from "../context/cartContext";
 
 function CartWidget() {
-  const { getTotalItemsInCart } = useContext(cartContext);
+  const { getItemsQty } = useContext(cartContext);
 
   return (
     <div>
+      <span>{getItemsQty()}</span>
       <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-      <span>{getTotalItemsInCart()}</span>
+      
     </div>
   );
 }

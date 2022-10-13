@@ -36,6 +36,7 @@ nav .subMenu ul {
 nav .subMenu ul li {
   margin-right: 1rem;
   list-style: none;
+  display: flex;
 }
 
 nav .subMenu ul li a {

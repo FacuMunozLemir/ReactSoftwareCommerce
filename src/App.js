@@ -4,12 +4,12 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import UserContextProvider from "./components/context/userContext";
+import CartContextProvider from "./components/context/cartContext";
 
 import "./fontawesome";
 function App() {
   return (
-    <UserContextProvider>
+    <CartContextProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -27,7 +27,7 @@ function App() {
           {/* <Route path="*" element={<h1>404: URL no encontrada</h1>}></Route> */}
         </Routes>
       </BrowserRouter>
-    </UserContextProvider>
+    </CartContextProvider>
   );
 }
 

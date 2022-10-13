@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./itemdetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 
+//Importamos el cartContext
+import { cartContext } from "../context/cartContext";
+
 function ItemDetail(props) {
   /*Hacemos un estado para guardar el item count*/
   const [estado, setEstado] = useState(0);
+
+  //Conectamos a context con el usecontext
+  const { addItem } = useContext(cartContext);
+
   function handleAddToCart(count) {
-    alert(`Se ha agregado ${count} unidades del producto seleccionado`);
-    setEstado(count);
+    addItem(props, count);
   }
 
   return (

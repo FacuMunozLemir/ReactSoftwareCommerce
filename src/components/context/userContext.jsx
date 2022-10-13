@@ -8,7 +8,9 @@ const userContext = createContext({ username: "anonymus", logedIn: false });
 export default function UserContextProvider(props) {
   console.log("tenemos context provider");
   return (
-    <userContext.Provider value={{ logedIn: false, userLanguaje: "es" }}>
+    <userContext.Provider
+      value={{ logedIn: false, userLanguaje: "es", username: "anonymus" }}
+    >
       {props.children}
     </userContext.Provider>
   );

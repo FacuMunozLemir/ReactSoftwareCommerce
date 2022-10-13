@@ -20,7 +20,7 @@ function NavBar() {
             <Link to="/categoria/todos">Todos</Link>
           </li>
           <li>
-            <Link to="/categoria/windows">Windows</Link>E
+            <Link to="/categoria/windows">Windows</Link>
           </li>
           <li>
             <Link to="/categoria/android">Android</Link>

@@ -9,7 +9,6 @@ function CartWidget() {
     <div>
       <span>{getItemsQty()}</span>
       <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-      
     </div>
   );
 }

@@ -5,34 +5,38 @@ import getItems from "../../services/mockAPI";
 import { getItemsByCategory } from "../../services/mockAPI";
 import { useParams } from "react-router-dom";
 
-//1. Obtener los datos de nuestra mock api
-// estado
-// cliclos de vida
-// props
-// promesas
-// ...map
 
 function ItemListContainer(props) {
-  let [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoadiong] = useState(true);
   let categoria = useParams().SO;
 
   useEffect(() => {
     if (categoria === undefined || categoria == "todos") {
       getItems().then((respuestaDatos) => setData(respuestaDatos));
     } else {
-      getItemsByCategory(categoria).then((respuestaDatos) =>
-        setData(respuestaDatos)
-      );
+      getItemsByCategory(categoria)
+      .then((respuestaDatos) =>setData(respuestaDatos))
+      // .finally(() => setIsLoadiong(false))
     }
   }, [categoria]);
 
+  //Utilizar operador lógico &&
+
+
   return (
-    <div className="container">
-      <h1>{props.greeting}</h1>
-      <div className="itemsContainer">
-        <ItemList itemData={data} />
+    <div>
+      {/* {
+        isLoading && <h3>Cargando...</h3>
+      } */}
+      <div className="container">
+        <h1>{props.greeting}</h1>
+        <div className="itemsContainer">
+          <ItemList itemData={data} />
+        </div>
       </div>
     </div>
+
   );
 }
 

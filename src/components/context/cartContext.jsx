@@ -54,6 +54,7 @@ export default function CartContextProvider({ children }) {
     return precioTotal;
   }
 
+
   //Pasamos el objeto value a los componentes hijos
   return (
     <cartContext.Provider

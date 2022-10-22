@@ -1,15 +1,26 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./cart.css";
 import { cartContext } from "../context/cartContext";
 import React, { useContext } from "react";
 
 function Cart() {
-  const { getItem } = useContext(cartContext);
   const { emptyCart } = useContext(cartContext);
   const { getItemPrice } = useContext(cartContext);
+  const { getItems } = useContext(cartContext);
+  const context = useContext(cartContext);
+  const { cart } = context;
+
+  let carritoVacio = false;
 
   function vaciarCarrito() {
     emptyCart();
   }
+
+
+  if(carritoVacio){
+    return <div>Tu Carrito está vacío..</div>
+  }
+  
   return (
     <div className="cart">
       <h3>Carrito de compras</h3>
@@ -17,11 +28,22 @@ function Cart() {
         <p>Prodcutos</p>
         <button onClick={vaciarCarrito}>Vaciar Carrito</button>
       </div>
-      <div className="cartProductsContainer"></div>
+      <div className="cartProductsContainer">
+        {cart.map (item=>(
+          <div className="cartItem">
+          <h3 className="cartItem--nombre">{item.nombre}</h3>
+          <p className="cartItem--precio">Cantidad:{item.count}</p>
+          <p className="cartItem--precio">Precio: ${item.precio}</p>
+          
+          <button className="btnEliminar">Eliminar</button>
+          </div>
+        ))}
+      </div>
       <div className="cartTotales">
         <p>TOTAL</p>
-        <p>{getItemPrice()}</p>
+        <p>${getItemPrice()}</p>
       </div>
+      <button className="btnConfirmar">Confirmar Compra</button>
     </div>
   );
 }

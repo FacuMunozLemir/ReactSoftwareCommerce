@@ -32,16 +32,85 @@
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  background: #543c8b;
-  color: #fff;
+  background: #fff;
+  color: #543c8b;
+  border: 0.05rem solid #543c8b;
   border-radius: 1rem;
-  border-style: none;
+
 }
 
 .cart .cartTitulos button:hover {
   cursor: pointer;
-  color: #543c8b;
-  background-color: #fff;
-  border: 0.05rem solid #543c8b;
+  color: #fff;
+  background-color: #543c8b;
+  border: 0.05rem solid #fff;
   transition: 0.3s all ease;
+}
+
+.cartProductsContainer{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartProductsContainer .cartItem{
+  width: 100%;
+  padding: 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.05rem solid #000;
+}
+
+.cartProductsContainer .cartItem .cartItem--nombre{
+  font-size: 1.2rem;
+
+}
+
+.cartProductsContainer .cartItem .btnEliminar{
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border: 0.05rem solid red;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.cartProductsContainer .cartItem .btnEliminar:hover{
+  background-color: #fff;
+  color: red;
+  border: 0.05rem solid red;
+  transition: .3s all ease;
+}
+
+.cart .cartTotales{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart .cartTotales p{
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+
+.cart .btnConfirmar{
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #543c8b;
+  color: #fff;
+  border-radius: 0.5rem;
+  border:none ;
+}
+
+.cart .btnConfirmar:hover{
+  transform: scale(1.1);
+  transition: .3s all ease;
 }

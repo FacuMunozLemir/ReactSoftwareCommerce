@@ -51,6 +51,7 @@ function ItemDetailContainer() {
             <h3>Cargando...</h3>} */}
           <div className="itemDetailContainer">
             <ItemDetail
+              key = {item.id}
               id = {item.id}
               nombre={item.nombre}
               stock={item.stock}

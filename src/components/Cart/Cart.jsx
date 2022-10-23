@@ -10,14 +10,16 @@ function Cart() {
   const context = useContext(cartContext);
   const { cart } = context;
 
-  let carritoVacio = false;
+  let carritoVacio = [];
+  carritoVacio = cart;
 
   function vaciarCarrito() {
     emptyCart();
   }
 
 
-  if(carritoVacio){
+  if(carritoVacio.length === 0){
+    console.log(carritoVacio);
     return <div>Tu Carrito está vacío..</div>
   }
 
@@ -35,6 +37,7 @@ function Cart() {
       <div className="cartProductsContainer">
         {cart.map (item=>(
           <div className="cartItem">
+            <p>{item.key}</p>
           <h3 className="cartItem--nombre">{item.nombre}</h3>
           <p className="cartItem--precio">Cantidad:{item.count}</p>
           <p className="cartItem--precio">Precio: ${item.precio}</p>

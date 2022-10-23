@@ -6,7 +6,7 @@ import React, { useContext } from "react";
 function Cart() {
   const { emptyCart } = useContext(cartContext);
   const { getItemPrice } = useContext(cartContext);
-  const { getItems } = useContext(cartContext);
+  const { deleteItems } = useContext(cartContext);
   const context = useContext(cartContext);
   const { cart } = context;
 
@@ -19,6 +19,10 @@ function Cart() {
 
   if(carritoVacio){
     return <div>Tu Carrito está vacío..</div>
+  }
+
+  function handleDeleteItem(itemId){
+    deleteItems(itemId);
   }
   
   return (
@@ -34,8 +38,7 @@ function Cart() {
           <h3 className="cartItem--nombre">{item.nombre}</h3>
           <p className="cartItem--precio">Cantidad:{item.count}</p>
           <p className="cartItem--precio">Precio: ${item.precio}</p>
-          
-          <button className="btnEliminar">Eliminar</button>
+          <button className="btnEliminar"  onClick={()=>handleDeleteItem(item.id)}>Eliminar</button>
           </div>
         ))}
       </div>

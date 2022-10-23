@@ -7,7 +7,7 @@ function CartWidget() {
 
   return (
     <div>
-      <span>{getItemsQty()}</span>
+      <span>{getItemsQty() > 0 && getItemsQty()}</span>
       <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
     </div>
   );

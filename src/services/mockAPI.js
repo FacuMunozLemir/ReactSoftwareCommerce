@@ -5,7 +5,7 @@ const data = [
   {
     id: 1,
     nombre: "Mi consultorio - Windows",
-    stock: "5",
+    stock: 5,
     categoria: "windows",
     descripcion:
       "Programa para computadoras con SO Windows principalmente pensado para llevar el control tus pacientes, con sus fichas medicas, fotos, y mucho más",
@@ -15,7 +15,7 @@ const data = [
   {
     id: 2,
     nombre: "Mi cochera - Windows",
-    stock: "4",
+    stock: 4,
     categoria: "windows",
     descripcion:
       "Programa para computadoras con SO Windows principalmente pensado para llevar el control de la entrada/salida de los vehículos en una 'cochera' o 'parking' ",
@@ -25,7 +25,7 @@ const data = [
   {
     id: 3,
     nombre: "Mi restaruante - Windows",
-    stock: "3",
+    stock: 3,
     categoria: "windows",
     descripcion:
       "Programa para computadoras con SO Windows principalmente pensado para llevar el control de las ventas, mesas y comandas de tu restaurante",
@@ -35,7 +35,7 @@ const data = [
   {
     id: 4,
     nombre: "Mi Bar - Android",
-    stock: "5",
+    stock: 5,
     categoria: "android",
     descripcion:
       "Programa para dispositivos con SO Android principalmente pensado para llevar el control de las ventas, mesas y comandas de tu Bar",
@@ -45,7 +45,7 @@ const data = [
   {
     id: 5,
     nombre: "Mi Restaurante - Android",
-    stock: "5",
+    stock: 5,
     categoria: "android",
     descripcion:
       "Programa para dispositivos con SO Android principalmente pensado para llevar el control de las ventas, mesas y comandas de tu restaurante",
@@ -55,7 +55,7 @@ const data = [
   {
     id: 6,
     nombre: "Mi Cochera - Android",
-    stock: "3",
+    stock: 3,
     categoria: "android",
     descripcion:
       "Programa para dispositivos con SO Android principalmente pensado para llevar el control de la entrada/salida de los vehículos en una 'cochera' o 'parking' ",

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getSingleElement } from "../../services/mockAPI";
+import { getSingleElement } from "../../services/firestore";
 import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Orbit } from '@uiball/loaders'
@@ -51,7 +51,7 @@ function ItemDetailContainer() {
             <h3>Cargando...</h3>} */}
           <div className="itemDetailContainer">
             <ItemDetail
-              key = {item.id}
+              key={item.id}
               id = {item.id}
               nombre={item.nombre}
               stock={item.stock}

@@ -6,7 +6,7 @@ import { useState } from "react";
 //Importamos el cartContext
 import { cartContext } from "../context/cartContext";
 
-function ItemDetail(props) {
+export default function ItemDetail(props) {
   /*Hacemos un estado para guardar el item count*/
   const [estado, setEstado] = useState(0);
 
@@ -15,6 +15,7 @@ function ItemDetail(props) {
 
   function handleAddToCart(count) {
     addItem(props, count);
+
   }
 
   return (
@@ -46,4 +47,4 @@ function ItemDetail(props) {
   );
 }
 
-export default ItemDetail;
+

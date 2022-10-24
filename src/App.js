@@ -5,9 +5,12 @@ import ItemDetailContainer from "./components/itemDetailContainer/itemDetailCont
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CartContextProvider from "./components/context/cartContext";
-
 import "./fontawesome";
+
+
 function App() {
+
+
   return (
     <CartContextProvider>
       <BrowserRouter>

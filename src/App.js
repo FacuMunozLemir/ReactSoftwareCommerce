@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CartContextProvider from "./components/context/cartContext";
 import "./fontawesome";
@@ -24,6 +25,7 @@ function App() {
             path="/categoria/:SO"
             element={<ItemListContainer greeting="Catálogo de Software" />}
           />
+          <Route path="/checkout/:orderid" element={<Checkout/>}></Route>
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Cart />} />
 

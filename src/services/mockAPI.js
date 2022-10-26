@@ -49,7 +49,7 @@ const data = [
     categoria: "android",
     descripcion:
       "Programa para dispositivos con SO Android principalmente pensado para llevar el control de las ventas, mesas y comandas de tu restaurante",
-    precio: 250000,
+    precio: 25000,
     img: "/assets/img/restaurante.jpg",
   },
   {

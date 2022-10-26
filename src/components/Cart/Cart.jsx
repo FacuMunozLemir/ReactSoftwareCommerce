@@ -1,7 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./cart.css";
-import { cartContext } from "../context/cartContext";
 import React, { useContext } from "react";
+import { cartContext } from "../context/cartContext";
+import { Link } from "react-router-dom";
+import { createBuyOrder } from "../../services/firestore";
+import { useNavigate } from "react-router-dom";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 function Cart() {
   const { emptyCart } = useContext(cartContext);
@@ -9,6 +12,8 @@ function Cart() {
   const { deleteItems } = useContext(cartContext);
   const context = useContext(cartContext);
   const { cart } = context;
+
+
 
   let carritoVacio = [];
   carritoVacio = cart;
@@ -20,12 +25,21 @@ function Cart() {
 
   if(carritoVacio.length === 0){
     console.log(carritoVacio);
-    return <div>Tu Carrito está vacío..</div>
+    return(
+      <div className="carritoVacioContainer">
+        <div className="texto">Tu Carrito está vacío..</div>
+        <Link to="/" className="btnVolver">Seguir comprando</Link>
+      </div>
+    );
   }
 
   function handleDeleteItem(itemId){
     deleteItems(itemId);
   }
+
+
+
+  
   
   return (
     <div className="cart">
@@ -36,20 +50,24 @@ function Cart() {
       </div>
       <div className="cartProductsContainer">
         {cart.map (item=>(
-          <div className="cartItem">
-            <p>{item.key}</p>
-          <h3 className="cartItem--nombre">{item.nombre}</h3>
-          <p className="cartItem--precio">Cantidad:{item.count}</p>
-          <p className="cartItem--precio">Precio: ${item.precio}</p>
-          <button className="btnEliminar"  onClick={()=>handleDeleteItem(item.id)}>Eliminar</button>
+          <div key={item.id} className="cartProductsContainer2">
+            <div className="cartItem">
+            <img src={item.img} alt="imagen de producto" className="cartItem--img"/>
+            <h3 className="cartItem--nombre">{item.nombre}</h3>
+            <p className="cartItem--precio">Cantidad:{item.count}</p>
+            <p className="cartItem--precio">Precio: ${item.precio}</p>
+            <button className="btnEliminar"  onClick={()=>handleDeleteItem(item.id)}>Eliminar</button>
+            </div>
           </div>
+
         ))}
       </div>
       <div className="cartTotales">
         <p>TOTAL</p>
         <p>${getItemPrice()}</p>
       </div>
-      <button className="btnConfirmar">Confirmar Compra</button>
+      <CheckoutForm/>
+      
     </div>
   );
 }

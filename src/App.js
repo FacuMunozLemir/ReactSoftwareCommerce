@@ -7,6 +7,7 @@ import Checkout from "./components/Checkout/Checkout";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CartContextProvider from "./components/context/cartContext";
 import "./fontawesome";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -31,14 +32,10 @@ function App() {
 
           {/* <Route path="*" element={<h1>404: URL no encontrada</h1>}></Route> */}
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </CartContextProvider>
   );
 }
-
-// 1 Instalar React Router dom
-// 2 Configurar nuestro Routing
-// 3 Definimos nuestras rutas
-// 4 Reemplazar nuestras etiquetas <a> por <Link>
 
 export default App;

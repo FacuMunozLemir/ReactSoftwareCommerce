@@ -2,8 +2,6 @@ import "./cart.css";
 import React, { useContext } from "react";
 import { cartContext } from "../context/cartContext";
 import { Link } from "react-router-dom";
-import { createBuyOrder } from "../../services/firestore";
-import { useNavigate } from "react-router-dom";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 function Cart() {
@@ -36,10 +34,6 @@ function Cart() {
   function handleDeleteItem(itemId){
     deleteItems(itemId);
   }
-
-
-
-  
   
   return (
     <div className="cart">

@@ -15,7 +15,6 @@ export default function ItemDetail(props) {
 
   function handleAddToCart(count) {
     addItem(props, count);
-
   }
 
   return (

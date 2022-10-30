@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
 import { cartContext } from "../context/cartContext";
 import { createBuyOrder } from "../../services/firestore";
+import "./checkoutform.css"
 
 
 export default function CheckoutForm(){
@@ -55,12 +56,12 @@ export default function CheckoutForm(){
 
                 <div className="form-item">
                     <label htmlFor="phone">Teléfono</label>
-                    <input onChange={inputChangeHandler} type="text" name="phone" placeholder="Teléfono" value={dataForm.phone} required/>
+                    <input onChange={inputChangeHandler} type="number" name="phone" placeholder="Teléfono" value={dataForm.phone} required/>
                 </div>
 
                 <div className="form-item">
                     <label htmlFor="email">Email</label>
-                    <input onChange={inputChangeHandler} type="text" name="email" placeholder="Email" value={dataForm.email} required/>
+                    <input onChange={inputChangeHandler} type="email" name="email" placeholder="Email" value={dataForm.email} required/>
                 </div>
                 <button className="btnConfirmar" type="submit">Confirmar Compra</button>
             </form>

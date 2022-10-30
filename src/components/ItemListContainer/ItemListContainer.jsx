@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import {getItems} from "../../services/firestore";
 import { getItemsByCategory } from "../../services/firestore";
 import { useParams } from "react-router-dom";
+import { Orbit } from '@uiball/loaders'
 
 
 function ItemListContainer(props) {
@@ -28,9 +29,15 @@ function ItemListContainer(props) {
 
   return (
     <div>
-      {/* {
-        isLoading && <h3>Cargando...</h3>
-      } */}
+      {isLoading && 
+        <div className="loader">
+          <Orbit 
+            size={25}
+            speed={1.5} 
+            color="black" 
+          />
+      </div>
+                      }
       <div className="container">
         <h1>{props.greeting}</h1>
         <div className="itemsContainer">

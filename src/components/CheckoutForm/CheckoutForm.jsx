@@ -31,7 +31,6 @@ export default function CheckoutForm(){
     
     function handleCheckout(event){
         event.preventDefault();
-        //Objeto hardcodeado del comprador
         const orderData = {
           buyer: dataForm,
           items: cart,

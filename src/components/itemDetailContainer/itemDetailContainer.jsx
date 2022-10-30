@@ -35,12 +35,16 @@ function ItemDetailContainer() {
 
     return (
       <div>
+        
           {isLoading && 
-                      <Orbit 
-                      size={25}
-                      speed={1.5} 
-                      color="black" 
-                      />}
+            <div className="loader">
+              <Orbit 
+                size={25}
+                speed={1.5} 
+                color="black" 
+              />
+          </div>
+                      }
           {/* {error ? 
             <div>
               <h3 style={{color: "#aa0033"}}>Error obteniendo los datos

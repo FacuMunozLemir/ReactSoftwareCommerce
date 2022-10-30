@@ -1,0 +1,52 @@
+.checkoutContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkoutContainer h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.checkoutContainer h4{
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.checkoutContainer .checkoutContainer--detalle{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkoutContainer .checkoutContainer--detalle .cartProductsContainer2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkoutContainer .btnVolver{
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: 0.05rem solid #543c8b;
+    background-color: #543c8b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 1rem;
+}
+
+.checkoutContainer .btnVolver:hover{
+    background-color: #fff;
+    color: #543c8b;
+    transition: .3s all ease;
+  }

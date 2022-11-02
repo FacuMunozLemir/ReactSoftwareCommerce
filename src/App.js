@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CartContextProvider from "./components/context/cartContext";
 import "./fontawesome";
 import Footer from "./components/Footer/Footer";
+import NotFound from "./components/404/404";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Cart />} />
 
-          {/* <Route path="*" element={<h1>404: URL no encontrada</h1>}></Route> */}
+          <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

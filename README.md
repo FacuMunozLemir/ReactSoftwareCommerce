@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Nombre del proyecto: React Software Commerce
+## React software commerce V1.0.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+... 
 
-## Available Scripts
+## Acerca del proyecto 
 
-In the project directory, you can run:
+Proyecto simulando un E-Commerce básico donde los productos son productos de Software. La idea de este proyecto es poder utilizarlo como proyecto final para el curso de React Js de CoderHouse.
 
-### `npm start`
+...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades principales
+- Filtro de producto basado en el sistema operativo destino: Se venden software destinados a dispositivos con SO "Android" o "Windows".
+- Vista detallada del producto seleccionado: aquí podemos ver en datelle la imagen de producto, su descripción y es aquí donde podemos seleccionar la cantidad que deseamos agregar al carrito (si superamos el stock disponible una alerta nos va avisar que no podemos superar dicha cantidad).
+- Carrito de compras: En el carrito podremos ver un resumen de todos los productos que vamos a comprar, con su precio individual y el valor total de la compra.
+- Realizar compra: Para finalizar la compra el usuario debe introducir sus datos personales (nombre completo, teléfono y mail) en un formulario.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+...
 
-### `npm test`
+## Flujo de interacción del usuario
+1) El usuario selecciona el producto que desea comprar pulsando el boton "Descripción".
+2) El usuario selecciona la cantidad del producto que desea comprar y luego aprieta el botón "Agregar al Carrito". 
+3) Una vez realizado el paso anterior el usuario podrá ver la cantidad de items que tiene en el carrito en el ícono en la parte derecha del navegador.
+4) En el carrito podrá ver un resumen de lo que va a comprar junto con el valor total a abonar por la compra.
+5) Para finalizar la compra deberá introducir sus datos en un formulario.
+6) Luego de llenar sus datos solo debe apretar el botón "Confirmar compra" y listo esto va a redirigir al usuario a una pantalla de éxito en la compra.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### IMPORTANTE: El carrito no se vacía sinó hasta despues de terminada la compra cuando el usuario presiona el botón "Volver al Inicio" de la pantalla de éxito en la compra (checkout).
 
-### `npm run build`
+...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ¿Cómo usar el proyecto?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Clonar el repositorio
+$ git clone https://github.com/FacuMunozLemir/ReactSoftwareCommerce
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Ir al repositorio 
+$ cd ReactSoftwareCommerce
 
-### `npm run eject`
+### Instalar las dependencias
+$ npm intall
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Ejecutar la app
+$npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Dependencias aparte del proyecto
+La idea de esta sección es dejar mostrado cuales son las otra dependencias que el proyecto podría llegar a necesitar, junto con sus versiones, en caso que no funcione una vez clonado
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    "@fortawesome/fontawesome-svg-core": "^6.2.0"
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@uiball/loaders": "^1.2.6",
+    "firebase": "^9.12.1",

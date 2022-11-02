@@ -65,11 +65,6 @@ export default function CheckoutForm(){
                 </div>
                 <button className="btnConfirmar" type="submit">Confirmar Compra</button>
             </form>
-
-            
-
-
-
         </div>
     )
 }

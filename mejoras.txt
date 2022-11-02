@@ -2,4 +2,4 @@ Oportunidades de mejora de código
 
 1) En la app.js se eliminaron comentarios innecesarios
 
-2) 
+2) asdgit 
